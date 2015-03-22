@@ -157,8 +157,7 @@ body {
 .reveal pre.stretch code {
   height: 100%;
   max-height: 100%;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box; }
+  box-sizing: border-box; }
 
 /*********************************************
  * CONTROLS
@@ -458,8 +457,7 @@ body {
   min-height: 700px;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box; }
+  box-sizing: border-box; }
 
 .reveal.center.cube .slides section {
   min-height: 0; }
@@ -536,8 +534,7 @@ body {
 .reveal.page .slides section {
   padding: 30px;
   min-height: 700px;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box; }
+  box-sizing: border-box; }
 
 .reveal.page .slides section.past {
   z-index: 12; }
@@ -640,8 +637,7 @@ body {
   visibility: visible !important;
   cursor: pointer;
   background: rgba(0, 0, 0, 0.1);
-  -moz-box-sizing: border-box;
-       box-sizing: border-box; }
+  box-sizing: border-box; }
 
 .reveal.overview .slides section, .reveal.overview-deactivating .slides section {
   -webkit-transition: none !important;
@@ -972,8 +968,7 @@ body {
   padding: 0 10px;
   float: right;
   opacity: 0.6;
-  -moz-box-sizing: border-box;
-       box-sizing: border-box; }
+  box-sizing: border-box; }
 
 .reveal .overlay header a:hover {
   opacity: 1; }
