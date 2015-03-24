@@ -45,7 +45,7 @@
 					<h1>Styler le web</h1>
 					<h3>Styles CSS <br> Principes fondamentaux et +</h3>
 				</section>
-				
+
 				<section>
 					<h2>Qui suis-je ?</h2>
 				</section>
@@ -64,75 +64,266 @@
 				</section>
 
 				<section>
-					<h2>Les CSS c'est quoi?</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
-				</section>
-				
-				<section>
-					<section>
-						<h2>Les Selecteurs</h2>
+					<section data-markdown>
+					##Les CSS c'est quoi?
+
+
 
 					</section>
+					<section data-markdown>
+
+		body {
+			background: #222;
+			background-color: #222;
+		}
+		.reveal {
+			font-family: 'Source Sans Pro', Helvetica, sans-serif;
+			font-size: 38px;
+			font-weight: normal;
+			color: #fff;
+		}
+		::selection {
+			color: #fff;
+			background: #bee4fd;
+			text-shadow: none;
+		}
+
+					</section>
+
 				</section>
-				
+
+
+
+
+				<section>
+					<section data-markdown>
+						##Les Selecteurs
+
+					</section>
+					<section data-markdown>
+						##### Exemple
+
+							&lt;button type="submit" class="btn btn--submit" id="bouton-y" name="Envoyer">&lt;/button>
+
+					</section>
+					<section>
+						<button type="submit" class="btn btn--submit" id="" name="Envoyer">Envoyer</button>
+					</section>
+					<section data-markdown>
+						##### Tag
+
+							button{
+								background-color: #e67e22;
+								font-size: 20px;
+							}
+
+					</section>
+
+					<section>
+						<style>
+						button#bouton-y{
+							background-color: #e67e22;
+							font-size: 20px;
+						}</style>
+						<button type="submit" class="btn btn--submit" id="bouton-y" name="Envoyer">Envoyer</button>
+					</section>
+
+					<section data-markdown>
+						##### Attributs
+
+							[type="submit"]{
+								border: none;
+							}
+
+					</section>
+
+					<section data-markdown>
+						##### Class
+
+							.btn--submit{
+								color: white;
+							}
+
+					</section>
+
+					<section data-markdown>
+						##### Class attributs
+
+							[class*="btn"]{
+								padding: 10px;
+							}
+
+					</section>
+
+					<section data-markdown>
+						##### Id
+
+							#bouton-y{
+								display: inline-block;
+								transition: all 0.5s;
+							}
+
+					</section>
+
+					<section>
+						<style>
+						button#bouton-x{
+							background-color: #e67e22;
+							font-size: 20px;
+							display: inline-block;
+							padding: 10px;
+							border: none;
+							color:white;
+							transition: all 0.5s;
+						}</style>
+						<button type="submit" class="btn btn--submit" id="bouton-x" name="Envoyer">Envoyer</button>
+					</section>
+
+					<section data-markdown>
+						##### Hover
+
+							.btn:hover{
+								background-color: #d35400 ;
+							}
+
+					</section>
+
+					<section data-markdown>
+						##### Before
+
+							.btn:before{
+								content: ":) " ;
+							}
+
+					</section>
+
+					<section>
+						<style>
+						button#bouton-w{
+							background-color: #e67e22;
+							font-size: 20px;
+							display: inline-block;
+							padding: 10px;
+							border: none;
+							color:white;
+							transition: all 0.5s;
+						}
+						button#bouton-w:hover{
+							background-color: #d35400 ;
+						}
+						button#bouton-w:before{
+							content: ":) " ;
+						}
+						</style>
+						<button type="submit" class="btn btn--submit" id="bouton-w" name="Envoyer">Envoyer</button>
+					</section>
+
+					<section data-markdown>
+						##### Effet!
+
+							.btn:before{
+								content: "";
+								display:block;
+								min-height:100%;
+								background-color:#2c3e50;
+							}
+
+					</section>
+
+					<section>
+						<style>
+						button#bouton-v{
+							background-color: transparent;
+							font-size: 20px;
+							display: inline-block;
+							padding: 10px;
+							border: none;
+							color:white;
+							transition: all 0.5s;
+							position:relative;
+							z-index:1;
+						}
+
+						button#bouton-v:before{
+							content: "";
+							display:block;
+							height:100%;
+							max-height:0;
+							background-color: #2c3e50;
+							transition: max-height 0.5s;
+							width:100%;
+							position:absolute;
+							top:0;
+							left:0;
+							z-index:-1;
+						}
+
+						button#bouton-v:hover:before{
+							max-height:100%;
+
+						}
+						</style>
+						<button type="submit" class="btn btn--submit" id="bouton-v" name="Envoyer">Envoyer</button>
+					</section>
+
+				</section>
+
 				<section>
 					<section>
 						<h2>Display</h2>
 
 					</section>
 				</section>
-				
+
 				<section>
 					<section>
 						<h2>Box Model</h2>
 
 					</section>
 				</section>
-				
+
 				<section>
 					<section>
 						<h2>Position</h2>
 
 					</section>
 				</section>
-				
+
 				<section>
 					<section>
 						<h2>Float</h2>
 
 					</section>
 				</section>
-				
+
 				<section>
 					<section>
 						<h2>@media</h2>
 
 					</section>
 				</section>
-				
+
 				<section>
 					<section>
 						<h2>Transitions / animation</h2>
 
 					</section>
 				</section>
-				
+
 				<section>
 					<section>
 						<h2>Hack</h2>
 
 					</section>
 				</section>
-				
+
 				<section>
 					<section>
 						<h2>Bonnes pratiques</h2>
 
 					</section>
 				</section>
-				
+
 				<section>
 					<section>
 						<h2>Préprocesseurs</h2>
@@ -473,6 +664,7 @@ Reveal.addEventListener( 'customevent', function() {
 				progress: true,
 				history: true,
 				center: true,
+				slideNumber: true,
 
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
