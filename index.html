@@ -444,20 +444,63 @@
 						Allez sur linuq.org
 					</section>
 				</section>
+				<section>
+					<section data-markdown>
+						##Priorités
+					</section>
 
+					<section data-markdown>
+						La dernière propriété est toujours prioritaire
+
+							.selecteur{
+								color: blue;
+							}
+							.selecteur{
+								color: red;
+							}
+					</section>
+					<section data-markdown>
+						##Sauf si...
+
+							.selecteur{
+								color: white !important; /* Hack, mais c'est le MAL! */}
+
+							.selecteur.selecteur.selecteur.selecteur{
+								color: grey; /* Hack, plusieurs fois le même selecteur */}
+
+							.parent .selecteur{
+								color: green; /* Avec parent, plus prioritaire */}
+
+							#idselecteur{
+								color: blue; /* Id plus prioritaire que les class */}
+
+							.selecteur{
+								color: red; /* class plus prioritaire que les tag */}
+
+							button{
+								color: yellow;
+							}
+					</section>
+				</section>
 
 				<section>
 					<section data-markdown>
 						##Display
 
-						Deux grandes famille, inline et block
-							.selecteur {
+						Référence: http://fr.learnlayout.com/display.html
+
+					</section>
+					<section data-markdown>
+						####Deux grandes famille, inline et block
+
+						Quelques exemples:
+
+							.block-famille {
 								display: block;
 								display: table;
 								display: flex;
-								...
 							}
-							.autre {
+							.inline-famille {
 								display: inline;
 								display: inline-block;
 							}
@@ -484,48 +527,278 @@
 				</section>
 
 				<section>
+					<section data-markdown>
+						##Box Model
+
+						Référence : http://fr.learnlayout.com/box-model.html
+					</section>
+					<section data-markdown>
+						### Dimentions
+
+							.selecteur{
+								width:100%;
+								max-width:300px;
+								min-width: 100px;
+								height: auto;
+								max-height: 2vh; /* ie9+*/
+								min-height: 3em;
+							}
+					</section>
+					<section data-markdown>
+						### Marges et padding
+
+					</section>
+					<section data-markdown>
+						### Bordures
+
+							.selecteur{
+								border: 1px solid blue;
+								border-bottom: none;
+							}
+					</section>
 					<section>
-						<h2>Box Model</h2>
+						<style media="screen">
+						.selecteurBorder.selecteurBorder.selecteurBorder.selecteurBorder{
+							border: 1px solid blue;
+							border-bottom: none;
+						}
+						</style>
+						<div class="selecteurBorder">
+							exemple
+						</div>
+					</section>
+					<section data-markdown>
+						### Font-size
+
+							.selecteur{
+								font-size: 8px;
+								font-size: 0.5em;
+							}
+
+
+					</section>
+					<section data-markdown>
+						### En savoir plus
+
+						Font-size: https://developer.mozilla.org/en-US/docs/Web/CSS/font-size
+
+						em: http://www.alsacreations.com/article/lire/563-gerer-la-taille-du-texte-avec-les-em.html
+
+
+					</section>
+
+
+				</section>
+
+				<section>
+					<section data-markdown>
+						##Couleurs et +
+
+					</section>
+
+					<section data-markdown>
+
+						.selecteur{
+							color: white; /*Text color*/
+							background-color: orange;
+							background-image: url('../image/image.jpg');
+							border: 4px solid; /*Prend la valeur de "color"*/
+						}
+
+					</section>
+					<section>
+						<style media="screen">
+						.selecteurCouleur.selecteurCouleur.selecteurCouleur.selecteurCouleur{
+							color: white; /*Text color*/
+							display: inline-block;
+							padding:10px;
+							background-color: orange;
+							background-image: url('../image/image.jpg');
+							border: 4px solid; /*Prend la valeur de "color"*/
+						}
+						</style>
+
+							<div class="selecteurCouleur">
+								Exemple
+							</div>
+
 
 					</section>
 				</section>
 
 				<section>
-					<section>
-						<h2>Couleurs et +</h2>
+					<section data-markdown>
+						##Position
 
+						Référence: http://fr.learnlayout.com/position.html
+					</section>
+					<section data-markdown>
+						###Static
+
+							.selecteur{
+								position:static; /*de base*/
+							}
+					</section>
+					<section data-markdown>
+						###Relative
+
+							.selecteur{
+								position:relative;
+								top: -10px; /* 10px plus haut "qu'elle même"
+							}
+					</section>
+					<section data-markdown>
+						###Fixed
+
+						Les petites flèches de cette présentation
+					</section>
+					<section data-markdown>
+						###Absolute
+
+							.selecteur{
+								position: absolute;
+								top: 20px; /* à 20px du premier parent "relatif" recontré
+							}
 					</section>
 				</section>
 
 				<section>
-					<section>
-						<h2>Position</h2>
+					<section data-markdown>
+						##Float
 
+						Référence http://fr.learnlayout.com/float.html
+
+					</section>
+					<section data-markdown>
+						###Exercice
 					</section>
 				</section>
 
 				<section>
+					<section data-markdown>
+						##@media
+
+						Exemples: http://mediaqueri.es/
+					</section>
+					<section data-markdown>
+						### Appliquer des styles en fonction du format
+
+						Références https://developers.google.com/web/fundamentals/layouts/rwd-fundamentals/use-media-queries
+					</section>
+					<section data-markdown>
+						Exemple:
+
+							.selecteur{
+								width:100%;
+							}
+							@media (min-width:640px) {
+							  .selecteur{
+									width:50%;
+								}
+							}
+					</section>
 					<section>
-						<h2>Float</h2>
+						<style media="screen">
+						.selecteurMq.selecteurMq.selecteurMq{
+							width:100%;
+							background-color: grey;
+							color: white;
+						}
+						@media (min-width:640px) {
+							.selecteurMq.selecteurMq.selecteurMq{
+								width:50%;
+							}
+						}
+						</style>
+						<div class="selecteurMq">
+							Exemple media
+						</div>
 
 					</section>
+
 				</section>
 
-				<section>
-					<section>
-						<h2>@media</h2>
-
-					</section>
-				</section>
-
-				<section>
+				<section class="section__animation">
 					<section>
 						<h2>Transitions / animation</h2>
 
 					</section>
+					<section>
+					<style>
+					.section__animation .btn.btn--submit{
+						background-color: transparent;
+						font-size: 20px;
+						display: inline-block;
+						padding: 10px;
+						border: none;
+						color:white;
+						transition: all 0.5s;
+						position:relative;
+						z-index:1;
+					}
+
+					.section__animation .btn.btn--submit:before{
+						content: "";
+						display:block;
+						height:100%;
+						max-height:0;
+						background-color: #2c3e50;
+						transition: max-height 0.5s;
+						width:100%;
+						position:absolute;
+						top:0;
+						left:0;
+						z-index:-1;
+					}
+
+					.section__animation .btn.btn--submit:hover:before{
+						max-height:100%;
+
+					}
+					</style>
+					<button type="submit" class="btn btn--submit" >Envoyer</button>
+					</section>
+
+					<section data-markdown>
+					### Le code
+
+						.btn.btn--submit{
+							background-color: transparent;
+							font-size: 20px;
+							display: inline-block;
+							padding: 10px;
+							border: none;
+							color:white;
+							transition: all 0.5s;
+							position:relative;
+							z-index:1;
+						}
+
+						.btn.btn--submit:before{
+							content: "";
+							display:block;
+							height:100%;
+							max-height:0; /*1*/
+							background-color: #2c3e50;
+							transition: max-height 0.5s;/*2*/
+							width:100%;
+							position:absolute;
+							top:0;
+							left:0;
+							z-index:-1;
+						}
+
+						.btn.btn--submit:hover:before{
+							max-height:100%; /*3*/
+						}
+					</section>
+					<section data-markdown>
+						### Exercice
+
+					</section>
 				</section>
 
-				<section>
+				<!-- <section>
 					<section>
 						<h2>Hack</h2>
 
@@ -537,17 +810,20 @@
 						<h2>Bonnes pratiques</h2>
 
 					</section>
-				</section>
+				</section> -->
 
 				<section>
-					<section>
-						<h2>Préprocesseurs</h2>
+					<section data-markdown>
+						##Préprocesseurs
 
+						Référence (SASS) http://sass-lang.com/guide
 					</section>
+
+
 				</section>
 
 
-			
+
 
 			</div>
 
