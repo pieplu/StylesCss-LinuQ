@@ -141,7 +141,7 @@ body {
   overflow: auto;
   max-height: 400px;
   word-wrap: normal;
-  background: transparent;
+  background: #3F3F3F;
   color: #DCDCDC; }
 
 .reveal table {
@@ -257,3 +257,9 @@ body {
  *********************************************/
 .reveal .slide-number {
   color: #e7ad52; }
+
+.reveal .exempleBox {
+  background-color: #555;
+  border: 2px solid #e67e22; }
+.reveal .exempleInline {
+  display: inline; }

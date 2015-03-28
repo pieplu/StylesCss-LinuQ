@@ -33,3 +33,13 @@ $mainFontSize: 30px;
 // Theme template ------------------------------
 @import "../template/theme";
 // ---------------------------------------------
+.reveal{
+
+.exempleBox{
+  background-color:#555;
+  border:2px solid #e67e22;
+}
+.exempleInline{
+  display:inline;
+}
+}
